@@ -4,6 +4,10 @@
 	  html {
     font-family: GillSans, Calibri;
   }
+.dText {
+    font-family: Faruma;
+    font-size: 200%;	
+}
     </style>
 	  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
@@ -29,9 +33,9 @@
 }); */
 
 $(document).ready(function(){
-	//dText.innerHTML="test";
-	$("#translateButton").click(function(){
+	$("#form").submit(function(){
 	eTextValue=document.getElementById("eText").value;
+	//dText.innerHTML=eTextValue;
 /* 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 	  if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -47,6 +51,7 @@ $(document).ready(function(){
 		function(data){
 			dText.innerHTML=data.childNodes[0].childNodes[0].data;
 		});
+		return false;
 	});
 });
 
@@ -68,10 +73,10 @@ $(document).ready(function(){
 <div class="container" allign = "center">
 	<form id="form" method="post" align = "center" action="http://translate-dhivehi.rhcloud.com/Translator/services/Translate?wsdl/Translate">
 		<input id="eText" type = "text" align="center" placeholder="enter text" name="eText"></input>
- 		<!--<input class="waves-effect waves-light btn-large" type="submit" value="Translate"></input>-->
-		<a id="translateButton" class="waves-effect waves-light btn-large">Translate</a>
+ 		<input class="waves-effect waves-light btn-large" type="submit" value="Translate"></input>
+		<!--<a id="translateButton" class="waves-effect waves-light btn-large">Translate</a>-->
 	</form>
-	<div id="dText" class= "containner #ef9a9a red lighten-3">
+	<div id="dText" class= "containner #ef9a9a red lighten-3 dText">
 			<br>
 			<br>
 			<br>
