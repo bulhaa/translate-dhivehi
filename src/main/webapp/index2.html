@@ -16,34 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-/* $(document).ready(function(){
-	$("translateButton").click(
-		alert("Data: test")
-	);
-}); */
-
-/* $(document).ready(function(){
-   var $form = $('form');
-   $form.submit(function(){
-      $.post($(this).attr('action'), $(this).serialize(), function(response){
-			alert("Data: ");
-      },'json');
-      return false;
-   });
-}); */
 
 $(document).ready(function(){
 	$("#form").submit(function(){
 	eTextValue=document.getElementById("eText").value;
-	//dText.innerHTML=eTextValue;
-/* 	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-	  if (xhttp.readyState == 4 && xhttp.status == 200) {
-			alert("Data: ");
-	  }
-	};
-	xhttp.open("POST", "http://translate-dhivehi.rhcloud.com/Translator/services/Translate?wsdl/Translate", true);
-	xhttp.send("eText=Henry"); */
 		$.post("http://translate-dhivehi.rhcloud.com/Translator2/services/Translate?wsdl/Translate",
 		{
 			eText: eTextValue
@@ -55,15 +31,7 @@ $(document).ready(function(){
 	});
 });
 
-/*$("translateButton").click(function(){
-	$.ajax({
-	  url: "http://translate-dhivehi.rhcloud.com/Translator/services/Translate?wsdl/Translate",
-	  data: { name:"cat" },
-	  dataType: "xml",
-	}).done(function(data) {
-	  console.log(data);
-	});
-}); */
+
 </script>
 </head>
 <body>
@@ -73,8 +41,7 @@ $(document).ready(function(){
 <div class="container" allign = "center">
 	<form id="form" method="post" align = "center" action="http://translat-dhivehi.rhcloud.com/Translator/services/Translate?wsdl/Translate">
 		<input id="eText" type = "text" align="center" placeholder="enter text" name="eText"></input>
- 		<input class="waves-effect waves-light btn-large" type="submit" value="Translates"></input>
-		<!--<a id="translateButton" class="waves-effect waves-light btn-large">Translate</a>-->
+ 		<input class="waves-effect waves-light btn-large" type="submit" value="Translate"></input>
 	</form>
 	<div id="dText" class= "containner #ef9a9a red lighten-3 dText">
 			<br>
