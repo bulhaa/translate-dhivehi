@@ -9,12 +9,19 @@
     font-size: 200%;	
 }
     </style>
-	  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <script>
 
 $(document).ready(function(){
@@ -26,6 +33,7 @@ $(document).ready(function(){
 		},
 		function(data){
 			dText.innerHTML=data.childNodes[0].childNodes[0].data;
+			feedback.style="display:block";
 		});
 		return false;
 	});
@@ -33,17 +41,19 @@ $(document).ready(function(){
 
 
 </script>
-</head>
-<body>
+
 	<div class="container">
 		<h1 >Translator</h1>
 	</div>
-<div class="container" allign = "center">
-	<form id="form" method="post" align = "center" action="http://translat-dhivehi.rhcloud.com/Translator/services/Translate?wsdl/Translate">
-		<input id="eText" type = "text" align="center" placeholder="enter text" name="eText"></input>
+<div class="container" align = "center">
+	<form id="form" method="post" align = "center" action="">
+				<div class="input-field col s12">
+					<input id="eText" type="text" class="validate">
+					<label for="eText">Enter english text</label>
+				</div>
  		<input class="waves-effect waves-light btn-large" type="submit" value="Translate"></input>
 	</form>
-	<div id="dText" class= "containner #ef9a9a red lighten-3 dText">
+	<div id="dText" class= "containner #ef9a9a red lighten-3 dText" style="display:none">
 			<br>
 			<br>
 			<br>

@@ -11,6 +11,8 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import javax.ws.rs.container.ContainerResponseFilter;
+
 
 public class Translator {
 	
@@ -449,5 +451,6 @@ public class Translator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-	}
+	
+	}	
 }
